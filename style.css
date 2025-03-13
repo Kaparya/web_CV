@@ -1,0 +1,203 @@
+header {
+    background: #3d004e;
+    color: white;
+    padding: 15px 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s;
+    line-height: 1.6;
+}
+ 
+h1, h2, h3, p {
+    line-height: 1.6;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+section {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+.circle-img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+} 
+
+.avatar {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.card.dark-theme {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card p {
+    margin: 5px 0 0;
+    font-size: 20px;
+}
+
+.card:hover {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+details summary {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #3d004e;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+details summary:hover {
+    background-color: #62007d;
+    transform: scale(1.01);
+}
+
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #3d004e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #62007d;
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: 20px;
+    }
+
+    .circle-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    .card p {
+        font-size: 22px;
+    }
+
+    .scroll-container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 10px;
+    }
+
+    .circle-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card {
+        width: 43%;
+        padding: 10px;
+    }
+
+    .scroll-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .theme-toggle {
+        font-size: 14px;
+    }
+}
