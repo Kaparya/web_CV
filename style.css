@@ -171,8 +171,8 @@ details summary:hover {
     }
 
     .card {
-        width: 41%;
-        padding: 8px;
+        width: 42%;
+        padding: auto;
     }
 
     .scroll-container {
